@@ -20,10 +20,10 @@ function createGallery(galleryItems) {
 }
 
 const instance = basicLightbox.create(`<img width='' height='' src=''>`, {
-  onShow: (instance) => {
+  onShow: instance => {
     document.addEventListener('keydown', handlerEscModal);
   },
-  onClose: (instance) => {
+  onClose: instance => {
     document.removeEventListener('keydown', handlerEscModal);
   },
 });
@@ -36,7 +36,7 @@ function openImg(evt) {
 
   instance.element().querySelector('img').src = datasetSource;
   instance.show();
-}
+};
 
 function handlerEscModal(evt) {
   if (evt.key === 'Escape') {
