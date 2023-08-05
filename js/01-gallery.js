@@ -39,7 +39,8 @@ function openImg(evt) {
 };
 
 function handlerEscModal(evt) {
-  if (evt.key === 'Escape') {
+  if (evt.key === 'Escape') return;
+   {
     instance.close();
   };
 };
